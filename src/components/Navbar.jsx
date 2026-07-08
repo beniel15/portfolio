@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import { HiOutlineDocumentDownload } from 'react-icons/hi';
 
 const navLinks = [
   { id: 'home', label: 'Home' },
@@ -16,7 +15,6 @@ function Navbar({ theme, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Highlight active section while scrolling
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -54,7 +52,6 @@ function Navbar({ theme, toggleTheme }) {
           Beniel<span className="logo-accent">.</span>
         </a>
 
-        {/* Mobile menu toggle */}
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {navLinks.map((link) => (
             <li key={link.id}>
@@ -81,10 +78,6 @@ function Navbar({ theme, toggleTheme }) {
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
             {theme === 'light' ? <FiMoon /> : <FiSun />}
           </button>
-          <a href="/resume.pdf" className="btn btn-resume" download>
-            <HiOutlineDocumentDownload />
-            Resume
-          </a>
         </div>
       </div>
     </nav>

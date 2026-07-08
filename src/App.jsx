@@ -6,7 +6,6 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import ConnectWithMe from './components/ConnectWithMe';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import './App.css';
@@ -36,7 +35,6 @@ function App() {
         <Projects />
         <Education />
         <Contact />
-        <ConnectWithMe />
       </main>
       <Footer />
       <BackToTop />
